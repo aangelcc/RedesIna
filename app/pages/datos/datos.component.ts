@@ -32,7 +32,7 @@ export class DatosComponent implements OnInit{
     compartir(){
         SocialShare.shareText("Datos meteorológicos by CasaAntonio App: \n" +
             "**********\n" +
-            "Temperatura: "+this.tiempo.temperatura+" ºC\nHumedad "+this.tiempo.humedad);
+            "Temperatura: "+this.tiempo.temperatura+" ºC\nHumedad "+this.tiempo.humedad+"%");
     }
 
     ngOnInit(): void {
