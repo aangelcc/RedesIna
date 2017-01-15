@@ -1,0 +1,15 @@
+<ActionBar title="Consulta del tiempo">
+    <ActionItem text="Compartir" (tap)="compartir()" android.systemIcon="ic_menu_share_holo_light" ios.systemIcon="9" ios.position="right"></ActionItem>
+</ActionBar>
+<GridLayout rows="*,auto" verticalAlignment="center">
+    <GridLayout row="0" columns="*,*" rows="auto,*">
+        <Label row="0" col="0" text="0-0" text="Temperatura:" class="margen font-weight-bold h2"></Label>
+        <Label row="0" col="1" text="0-1" text="Humedad:" class="margen font-weight-bold h2"></Label>
+        <Label row="1" col="0" text="1-0" class="h1 datos-tiempo" [text]="tiempo.temperatura + ' ºC'"></Label>
+        <Label row="1" col="1" text="1-1" class="h1 datos-tiempo" [text]="tiempo.humedad +' %'"></Label>
+    </GridLayout>
+    <Button row="1" text="Actualizar Información" class="btn-primary" (tap)="actualizar()"></Button>
+    <ActivityIndicator [busy]="cargando" [visibility]="cargando ? 'visible' : 'collapse'" row="0" horizontalAlignment="center" verticalAlignment="center"></ActivityIndicator>
+</GridLayout>
+
+<!-- Si no se especifica nada, la fila o columna por defecto es cero -->

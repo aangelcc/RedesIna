@@ -12,6 +12,15 @@ components that have the btn class name.
     font-size: 18;
 }
 
+.margen{
+ margin: 10 5 10 5;
+}
+
+
+Page{
+    text-align: center;
+}
+
 /*
 In many cases you may want to use the NativeScript core theme instead
 of writing your own CSS rules. For a full list of class names in the theme
